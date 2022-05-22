@@ -96,4 +96,5 @@ ln -s /overlay/rrd/192.168.88.1/routeros/if_packets-wlan2.rrd /overlay/rrd/YOUR-
 /etc/init.d/collectd restart
 ```
 13-Graph are now avelable in graph page in interface tab.
+
 14-You are Done.
