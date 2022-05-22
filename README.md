@@ -4,11 +4,11 @@
 
 [Collectd-mod-routeros](https://openwrt.org/packages/pkgdata_owrt19_7/collectd-mod-routeros) is an openwrt package which based on "[Plugin routeros](https://collectd.org/wiki/index.php/Plugin:RouterOS)" from [Collected](https://collectd.org/documentation/manpages/collectd.conf.5.shtml#plugin_routeros). The routeros plugin connects to a device running RouterOS, the Linux-based operating system for routers by MikroTik. The plugin uses librouteros to connect and reads information about the interfaces and wireless connections of the device.
 
-**Since there is no GUI support for Collectd-mod-routeros in LuCi and openwrt,  I wrote this guid.**
+Since there is no GUI support for Collectd-mod-routeros in LuCi and openwrt out of the box, I wrote this guid.
 
-**1-**[**Install luci-app-statistics**](https://openwrt.org/docs/guide-user/luci/luci_app_statistics) **and config it.**
+1-[Install luci-app-statistics](https://openwrt.org/docs/guide-user/luci/luci_app_statistics) **and config it.
 
-**2-Install** collectd-mod-routeros package:
+2-Install** collectd-mod-routeros package:
 
 ```
 opkg update
