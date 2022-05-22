@@ -37,4 +37,31 @@ opkg install collectd-mod-routeros
 chmode 775
 ```
 
-7-Write config in the file baseluci-app-statistics pattern:d on
+7-Put config in the file, base on the luci-app-statistics pattern. Something like this:
+
+```
+LoadPlugin routeros
+<Plugin routeros>
+    <Router>
+      Host "Mikrotik IP"
+      User "admin"
+      Password "mikrotik password"
+      CollectInterface true
+    </Router>
+    <Router>
+      Host "Mikrotik IP"
+      User "admin"
+      Password "mikrotik password"
+      CollectRegistrationTable true
+    </Router>
+</Plugin>
+```
+8-Restart collected service:
+```
+/etc/init.d/collectd restart
+```
+9-
+
+
+
+Do not try to edit /etc/collectd.conf. LuCi will rewrite it after every reboot.
