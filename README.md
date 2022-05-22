@@ -37,4 +37,4 @@ opkg install collectd-mod-routeros
 chmode 775
 ```
 
-7-
+7-Write config in the file baseluci-app-statistics pattern:d on
