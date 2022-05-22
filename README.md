@@ -60,8 +60,41 @@ LoadPlugin routeros
 ```
 /etc/init.d/collectd restart
 ```
-9-
+9-New files which they belong to your remote router will be appear in "RRD" folder:
+
+10-Make some empty folder in your router folder in RRD path with preferd name which you want apeare in graph page:
 
 
+11-Symlink files in this filders to created file in remote folder:
+```
+ln -s /overlay/rrd/192.168.88.1/routeros/if_dropped-ether1.rrd /overlay/rrd/YOUR-ROUTER-FOLDER/interface-Mikrotik-ether1/if_dropped.rrd
+ln -s /overlay/rrd/192.168.88.1/routeros/if_dropped-ether2.rrd /overlay/rrd/YOUR-ROUTER-FOLDER/interface-Mikrotik-ether2/if_dropped.rrd
+ln -s /overlay/rrd/192.168.88.1/routeros/if_dropped-ether3.rrd /overlay/rrd/YOUR-ROUTER-FOLDER/interface-Mikrotik-ether3/if_dropped.rrd
+ln -s /overlay/rrd/192.168.88.1/routeros/if_dropped-wlan1.rrd /overlay/rrd/YOUR-ROUTER-FOLDER/interface-Mikrotik-wlan1/if_dropped.rrd
+ln -s /overlay/rrd/192.168.88.1/routeros/if_dropped-wlan2.rrd /overlay/rrd/YOUR-ROUTER-FOLDER/interface-Mikrotik-wlan2/if_dropped.rrd
+ln -s /overlay/rrd/192.168.88.1/routeros/if_errors-bridge.rrd /overlay/rrd/YOUR-ROUTER-FOLDER/interface-Mikrotik-bridge/if_errors.rrd
+ln -s /overlay/rrd/192.168.88.1/routeros/if_errors-ether1.rrd /overlay/rrd/YOUR-ROUTER-FOLDER/interface-Mikrotik-ether1/if_errors.rrd
+ln -s /overlay/rrd/192.168.88.1/routeros/if_errors-ether2.rrd /overlay/rrd/YOUR-ROUTER-FOLDER/interface-Mikrotik-ether2/if_errors.rrd
+ln -s /overlay/rrd/192.168.88.1/routeros/if_errors-ether3.rrd /overlay/rrd/YOUR-ROUTER-FOLDER/interface-Mikrotik-ether3/if_errors.rrd
+ln -s /overlay/rrd/192.168.88.1/routeros/if_errors-wlan1.rrd /overlay/rrd/YOUR-ROUTER-FOLDER/interface-Mikrotik-wlan1/if_errors.rrd
+ln -s /overlay/rrd/192.168.88.1/routeros/if_errors-wlan2.rrd /overlay/rrd/YOUR-ROUTER-FOLDER/interface-Mikrotik-wlan2/if_errors.rrd
+ln -s /overlay/rrd/192.168.88.1/routeros/if_octets-bridge.rrd /overlay/rrd/YOUR-ROUTER-FOLDER/interface-Mikrotik-bridge/if_octets.rrd
+ln -s /overlay/rrd/192.168.88.1/routeros/if_octets-ether1.rrd /overlay/rrd/YOUR-ROUTER-FOLDER/interface-Mikrotik-ether1/if_octets.rrd
+ln -s /overlay/rrd/192.168.88.1/routeros/if_octets-ether2.rrd /overlay/rrd/YOUR-ROUTER-FOLDER/interface-Mikrotik-ether2/if_octets.rrd
+ln -s /overlay/rrd/192.168.88.1/routeros/if_octets-ether3.rrd /overlay/rrd/YOUR-ROUTER-FOLDER/interface-Mikrotik-ether3/if_octets.rrd
+ln -s /overlay/rrd/192.168.88.1/routeros/if_octets-wlan1.rrd /overlay/rrd/YOUR-ROUTER-FOLDER/interface-Mikrotik-wlan1/if_octets.rrd
+ln -s /overlay/rrd/192.168.88.1/routeros/if_octets-wlan2.rrd /overlay/rrd/YOUR-ROUTER-FOLDER/interface-Mikrotik-wlan2/if_octets.rrd
+ln -s /overlay/rrd/192.168.88.1/routeros/if_packets-bridge.rrd /overlay/rrd/YOUR-ROUTER-FOLDER/interface-Mikrotik-bridge/if_packets.rrd
+ln -s /overlay/rrd/192.168.88.1/routeros/if_packets-ether1.rrd /overlay/rrd/YOUR-ROUTER-FOLDER/interface-Mikrotik-ether1/if_packets.rrd
+ln -s /overlay/rrd/192.168.88.1/routeros/if_packets-ether2.rrd /overlay/rrd/YOUR-ROUTER-FOLDER/interface-Mikrotik-ether2/if_packets.rrd
+ln -s /overlay/rrd/192.168.88.1/routeros/if_packets-ether3.rrd /overlay/rrd/YOUR-ROUTER-FOLDER/interface-Mikrotik-ether3/if_packets.rrd
+ln -s /overlay/rrd/192.168.88.1/routeros/if_packets-wlan1.rrd /overlay/rrd/YOUR-ROUTER-FOLDER/interface-Mikrotik-wlan1/if_packets.rrd
+ln -s /overlay/rrd/192.168.88.1/routeros/if_packets-wlan2.rrd /overlay/rrd/YOUR-ROUTER-FOLDER/interface-Mikrotik-wlan2/if_packets.rrd
+```
+12-Restart collected service:
+```
+/etc/init.d/collectd restart
+```
+13-Graph are now avelable in 
 
 Do not try to edit /etc/collectd.conf. LuCi will rewrite it after every reboot.
