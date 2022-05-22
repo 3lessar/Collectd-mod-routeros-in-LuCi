@@ -28,7 +28,7 @@ opkg install collectd-mod-routeros
 ```
 /etc/collectd/conf.d/
 ```
-
+Do not try to edit /etc/collectd.conf. LuCi will rewrite it after every reboot.
 5-Make plugin config file wqith this name: "routeros.conf"
 
 6-Make sure all directory and config file have 775 permision.
@@ -95,6 +95,5 @@ ln -s /overlay/rrd/192.168.88.1/routeros/if_packets-wlan2.rrd /overlay/rrd/YOUR-
 ```
 /etc/init.d/collectd restart
 ```
-13-Graph are now avelable in 
-
-Do not try to edit /etc/collectd.conf. LuCi will rewrite it after every reboot.
+13-Graph are now avelable in graph page in interface tab.
+14-You are Done.
