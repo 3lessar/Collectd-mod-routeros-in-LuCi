@@ -72,7 +72,7 @@ LoadPlugin routeros
 <img width="375" alt="Screen Shot 2022-05-23 at 4 09 40 AM" src="https://user-images.githubusercontent.com/22772774/169721979-02f6cf38-b0d0-486d-b585-195aeff774ce.png">
 
 
-11-Symlink files in this filders to created file in remote folder:
+11-Symlink files in this folders to files in remote folder:
 ```
 ln -s /overlay/rrd/192.168.88.1/routeros/if_dropped-ether1.rrd /overlay/rrd/YOUR-ROUTER-FOLDER/interface-Mikrotik-ether1/if_dropped.rrd
 ln -s /overlay/rrd/192.168.88.1/routeros/if_dropped-ether2.rrd /overlay/rrd/YOUR-ROUTER-FOLDER/interface-Mikrotik-ether2/if_dropped.rrd
