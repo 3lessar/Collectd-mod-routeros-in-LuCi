@@ -6,7 +6,7 @@
 
 Since there is no GUI support for Collectd-mod-routeros in LuCi and openwrt out of the box, I wrote this guid.
 
-1-[Install luci-app-statistics](https://openwrt.org/docs/guide-user/luci/luci_app_statistics) **and config it.
+1-[Install luci-app-statistics](https://openwrt.org/docs/guide-user/luci/luci_app_statistics) and config it.
 
 2-Install** collectd-mod-routeros package:
 
