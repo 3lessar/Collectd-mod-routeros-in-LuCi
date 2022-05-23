@@ -15,7 +15,7 @@ opkg update
 opkg install collectd-mod-routeros
 ```
 
-3-Login in LuCi and make sure in "Collectd Settings" in Statistic menu, "Directory for sub-configurations" submenu is enabled with this path:
+3-Login LuCi and make sure in "Collectd Settings" from Statistic menu, "Directory for sub-configurations" submenu is enabled with this path:
 
 ```
 /etc/collectd/conf.d/*.conf
@@ -23,14 +23,14 @@ opkg install collectd-mod-routeros
 
 ![](https://user-images.githubusercontent.com/22772774/169720327-7d9630a7-4884-4a79-a33a-e497dee364e8.png)
 
-4-Create this path on your router.
+4-Create this path on your router in terminal (SSH):
 
 ```
 /etc/collectd/conf.d/
 ```
 Do not try to edit /etc/collectd.conf. LuCi will rewrite it after every reboot.
 
-5-Make plugin config file wqith this name: "routeros.conf"
+5-Make plugin config file with this name: "routeros.conf"
 
 6-Make sure all directory and config file have 775 permision.
 
@@ -38,7 +38,7 @@ Do not try to edit /etc/collectd.conf. LuCi will rewrite it after every reboot.
 chmode 775
 ```
 
-7-Put config in the file, base on the luci-app-statistics pattern. Something like this:
+7-Put config in the "routeros.conf", base on the luci-app-statistics pattern. Something like this:
 
 ```
 LoadPlugin routeros
@@ -103,8 +103,8 @@ ln -s /overlay/rrd/192.168.88.1/routeros/if_packets-wlan2.rrd /overlay/rrd/YOUR-
 ```
 /etc/init.d/collectd restart
 ```
-13-Graph are now avelable in graph page in interface tab.
+13-Graph are now avelable on graph page on interface tab.
 
 14-You are Done.
 
-Ps: Special thanks to "Hannu Nyman" (<hannu.nyman@iki.fi>) for helpful hints which put me in right path.
+Ps: Special thanks to "Hannu Nyman" (<hannu.nyman@iki.fi>) from collcted team, for helpful hints which put me in the right path.
