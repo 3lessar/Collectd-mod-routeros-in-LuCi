@@ -62,7 +62,14 @@ LoadPlugin routeros
 ```
 9-New files which they belong to your remote router will be appear in "RRD" folder:
 
+![Screen Shot 2022-05-23 at 4 01 29 AM](https://user-images.githubusercontent.com/22772774/169721950-f1026902-73d4-46ed-8daf-521f6a9e2fb5.png)
+
+![Screen Shot 2022-05-23 at 4 06 07 AM](https://user-images.githubusercontent.com/22772774/169721968-7847e49a-526f-4360-9143-0ed840cfaf03.png)
+
+
 10-Make some empty folder in your router folder in RRD path with preferd name which you want apeare in graph page:
+
+<img width="375" alt="Screen Shot 2022-05-23 at 4 09 40 AM" src="https://user-images.githubusercontent.com/22772774/169721979-02f6cf38-b0d0-486d-b585-195aeff774ce.png">
 
 
 11-Symlink files in this filders to created file in remote folder:
@@ -98,3 +105,5 @@ ln -s /overlay/rrd/192.168.88.1/routeros/if_packets-wlan2.rrd /overlay/rrd/YOUR-
 13-Graph are now avelable in graph page in interface tab.
 
 14-You are Done.
+
+Ps: Special thanks to "Hannu Nyman" for helpful hints which put me in right path.
