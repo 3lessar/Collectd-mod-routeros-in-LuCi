@@ -29,6 +29,7 @@ opkg install collectd-mod-routeros
 /etc/collectd/conf.d/
 ```
 Do not try to edit /etc/collectd.conf. LuCi will rewrite it after every reboot.
+
 5-Make plugin config file wqith this name: "routeros.conf"
 
 6-Make sure all directory and config file have 775 permision.
