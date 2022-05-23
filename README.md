@@ -107,4 +107,4 @@ ln -s /overlay/rrd/192.168.88.1/routeros/if_packets-wlan2.rrd /overlay/rrd/YOUR-
 
 14-You are Done.
 
-Ps: Special thanks to "Hannu Nyman" <hannu.nyman@iki.fi> for helpful hints which put me in right path.
+Ps: Special thanks to "Hannu Nyman" (<hannu.nyman@iki.fi>) for helpful hints which put me in right path.
