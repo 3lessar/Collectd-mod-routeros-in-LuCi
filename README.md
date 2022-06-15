@@ -35,7 +35,7 @@ Do not try to edit /etc/collectd.conf. LuCi will rewrite it after every reboot.
 6-Make sure all directory and config file have 775 permision.
 
 ```
-chmode 775
+chmod 775
 ```
 
 7-Put config in the "routeros.conf", base on the luci-app-statistics pattern. Something like this:
